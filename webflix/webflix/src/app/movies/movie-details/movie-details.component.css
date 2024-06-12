@@ -1,0 +1,13 @@
+.movie-details {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .movie-detail-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .movie-details p {
+    margin-bottom: 10px;
+  }

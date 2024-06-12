@@ -1,0 +1,10 @@
+<div *ngIf="movie" class="movie-details">
+    <img [src]="movie.image" alt="{{ movie.name }}" class="movie-detail-image">
+    <h1>{{ movie.name }}</h1>
+    <p><strong>Genres:</strong> {{ movie.genreDisplay }}</p>
+    <p><strong>Rating:</strong> {{ movie.rating }}</p>
+    <p><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
+    <p>{{ movie.description }}</p>
+</div>
+
+  

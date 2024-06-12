@@ -1,0 +1,24 @@
+.movies-container {
+    padding: 20px;
+  }
+  
+  .movie-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .movie-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-thumbnail {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  

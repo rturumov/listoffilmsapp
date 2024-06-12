@@ -1,0 +1,21 @@
+<div class="series-container">
+  <ul class="series-list">
+    <li *ngFor="let data of series" class="series-item">
+      <img [src]="data.image" alt="{{ data.name }}" class="series-thumbnail">
+      <h2>{{ data.name }}</h2>
+      <p><strong>Genres:</strong> <span *ngFor="let genre of data.genre; let last = last">{{ genre.name }}<span *ngIf="!last">, </span></span></p>
+      <p>Rating: {{ data.rating }}</p>
+      <button (click)="onSelectSeries(data)">View Details</button>
+    </li>
+  </ul>
+
+  <div *ngIf="selectedSeries" class="selected-series-details">
+    <h1>{{ selectedSeries.name }}</h1>
+    <img [src]="selectedSeries.image" alt="{{ selectedSeries.name }}" class="series-detail-image">
+    <p>{{ selectedSeries.description }}</p>
+    <button (click)="deselectSeries()">Close Details</button>
+  </div>
+</div>
+
+
+

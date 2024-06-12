@@ -1,0 +1,24 @@
+<div class="cartoons-container">
+  <ul class="cartoons-list">
+    <li *ngFor="let cartoon of filteredCartoons" class="cartoons-item">
+      <img [src]="cartoon.image" alt="{{ cartoon.name }}" class="cartoons-thumbnail">
+      <h2>{{ cartoon.name }}</h2>
+      <p><strong>Genres:</strong> <span *ngFor="let genre of cartoon.genre; let last = last">{{ genre.name }}<span *ngIf="!last">, </span></span></p>
+      <p>Rating: {{ cartoon.rating }}</p>
+      <button (click)="onSelectCartoons(cartoon)">View Details</button>
+    </li>
+  </ul>
+  <div *ngIf="selectedCartoons" class="selected-cartoons-details">
+    <h1>{{ selectedCartoons?.name }}</h1>
+    <img [src]="selectedCartoons?.image" alt="{{ selectedCartoons?.name }}">
+    <p>{{ selectedCartoons?.description }}</p> <!-- Use safe navigation operator here -->
+    <button (click)="deselectCartoons()">Close Details</button>
+  </div>
+</div>
+
+<div class="genres">
+  <button *ngFor="let genre of selectedGenres" (click)="toggleGenreSelection(genre)">
+    {{ genre }}
+  </button>
+</div>
+

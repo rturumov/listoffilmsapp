@@ -1,0 +1,22 @@
+<div class="anime-container">
+  <ul class="anime-list">
+    <li *ngFor="let anime of anime" class="anime-item">
+      <img [src]="anime.image" alt="{{ anime.name }}" class="anime-thumbnail">
+      <h2>{{ anime.name }}</h2>
+      <p><strong>Genres:</strong> <span *ngFor="let genre of anime.genre; let last = last">{{ genre.name }}<span *ngIf="!last">, </span></span></p>
+      <p>Rating: {{ anime.rating }}</p>
+      <button (click)="onSelectAnime(anime)">View Details</button>
+    </li>
+  </ul>
+
+  <!-- Selected Movie Details -->
+  <div *ngIf="selectedAnime" class="selected-anime-details">
+    <h1>{{ selectedAnime.name }}</h1>
+    <img [src]="selectedAnime.image" alt="{{ selectedAnime.name }}" class="anime-detail-image">
+    <p>{{ selectedAnime.description }}</p>
+    <button (click)="deselectAnime()">Close Details</button>
+  </div>
+</div>
+
+
+

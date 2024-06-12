@@ -1,0 +1,9 @@
+<div *ngIf="series" class="series-details">
+  <img [src]="series.image" alt="{{ series.name }}" class="series-detail-image">
+  <h1>{{ series.name }}</h1>
+  <p><strong>Genres:</strong> {{ series.genreDisplay }}</p>
+  <p><strong>Rating:</strong> {{ series.rating }}</p>
+  <p><strong>Release Year:</strong> {{ series.releaseYear }}</p>
+  <p>{{ series.description }}</p>
+</div>
+

@@ -1,0 +1,9 @@
+<div *ngIf="cartoons" class="cartoons-details">
+  <img [src]="cartoons.image" alt="{{ cartoons.name }}" class="cartoons-detail-image">
+  <h1>{{ cartoons.name }}</h1>
+  <p><strong>Genres:</strong> {{ cartoons.genreDisplay }}</p>
+  <p><strong>Rating:</strong> {{ cartoons.rating }}</p>
+  <p><strong>Release Year:</strong> {{ cartoons.releaseYear }}</p>
+  <p>{{ cartoons.description }}</p>
+</div>
+

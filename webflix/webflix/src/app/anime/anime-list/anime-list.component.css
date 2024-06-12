@@ -1,0 +1,23 @@
+.anime-container {
+  padding: 20px;
+}
+
+.anime-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+
+.anime-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.anime-thumbnail {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}

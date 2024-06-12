@@ -1,0 +1,9 @@
+<div *ngIf="anime" class="anime-details">
+  <img [src]="anime.image" alt="{{ anime.name }}" class="anime-detail-image">
+  <h1>{{ anime.name }}</h1>
+  <p><strong>Genres:</strong> {{ anime.genreDisplay }}</p>
+  <p><strong>Rating:</strong> {{ anime.rating }}</p>
+  <p><strong>Release Year:</strong> {{ anime.releaseYear }}</p>
+  <p>{{ anime.description }}</p>
+</div>
+

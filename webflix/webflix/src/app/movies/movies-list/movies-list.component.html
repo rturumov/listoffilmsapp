@@ -1,0 +1,23 @@
+<div class="movies-container">
+    <!-- Movie List -->
+    <ul class="movie-list">
+      <li *ngFor="let movie of movies" class="movie-item">
+        <img [src]="movie.image" alt="{{ movie.name }}" class="movie-thumbnail">
+        <h2>{{ movie.name }}</h2>
+        <p><strong>Genres:</strong> <span *ngFor="let genre of movie.genre; let last = last">{{ genre.name }}<span *ngIf="!last">, </span></span></p>
+        <p>Rating: {{ movie.rating }}</p>
+        <button (click)="onSelectMovie(movie)">View Details</button>
+      </li>
+    </ul>
+  
+    <!-- Selected Movie Details -->
+    <div *ngIf="selectedMovie" class="selected-movie-details">
+      <h1>{{ selectedMovie.name }}</h1>
+      <img [src]="selectedMovie.image" alt="{{ selectedMovie.name }}" class="movie-detail-image">
+      <p>{{ selectedMovie.description }}</p>
+      <button (click)="deselectMovie()">Close Details</button>
+    </div>
+  </div>
+  
+  
+
